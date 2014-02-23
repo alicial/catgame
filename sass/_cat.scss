@@ -1,0 +1,59 @@
+.cat {
+  bottom: 0;
+  background-image: url('../images/cat.svg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+  &.angry {
+    background-color: red;
+    background-image: url('../images/cat-angry.svg');
+    &:after {
+      content: ": ANGRY";
+    }
+  }
+  &.hungry {
+    background-color: orange;
+    background-image: url('../images/cat-hungry.svg');
+    &:after {
+      content: ": hungry";
+    }
+  }
+  &.thirsty {
+    background-color: dodgerblue;
+    background-image: url('../images/cat-thirsty.svg');
+    &:after {
+      content: ": thirsty";
+    }
+  }
+  &.dirty {
+    background-color: saddlebrown;
+    background-image: url('../images/cat-dirty.svg');
+    &:after {
+      content: ": dirty";
+    }
+  }
+  &.bored {
+    background-color: white;
+    background-image: url('../images/cat-bored.svg');
+    &:after {
+      content: ": bored";
+    }
+  }
+  &.content {
+    background-color: palegoldenrod;
+    background-image: url('../images/cat-content.svg');
+    &:after {
+      content: ": content";
+    }
+  }
+  &.happy {
+    background-color: yellow;
+    background-image: url('../images/cat-happy.svg');
+    &:after {
+      content: ": HAPPY!";
+    }
+  }
+  &:after {
+    display: none;
+  }
+}

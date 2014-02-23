@@ -1,0 +1,16 @@
+* {
+  //box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  color: deepskyblue;
+  font-family: 'Open Sans';
+}
+.board {
+  width: $board-width;
+  height: $board-height;
+  background: #DDD;
+  margin: 20px auto;
+  position: relative;
+  border: 5px solid #EEE;
+}

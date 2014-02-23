@@ -1,0 +1,77 @@
+h1 {
+  text-align: center;
+  color: deepskyblue;
+  font-family: 'Open Sans'; }
+
+.board {
+  width: 600px;
+  height: 400px;
+  background: #DDD;
+  margin: 20px auto;
+  position: relative;
+  border: 5px solid #EEE; }
+
+.tile {
+  position: absolute;
+  width: 150px;
+  height: 100px; }
+
+.elem {
+  left: 50%;
+  margin-left: -75px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 20px; }
+  .elem.food {
+    background-image: url(../images/food.svg); }
+  .elem.water {
+    background-image: url(../images/water.svg); }
+  .elem.litter {
+    background-image: url(../images/litterbox.svg); }
+  .elem.toy {
+    background-image: url(../images/toy.svg); }
+
+.cat {
+  bottom: 0;
+  background-image: url("../images/cat.svg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center; }
+  .cat.angry {
+    background-color: red;
+    background-image: url("../images/cat-angry.svg"); }
+    .cat.angry:after {
+      content: ": ANGRY"; }
+  .cat.hungry {
+    background-color: orange;
+    background-image: url("../images/cat-hungry.svg"); }
+    .cat.hungry:after {
+      content: ": hungry"; }
+  .cat.thirsty {
+    background-color: dodgerblue;
+    background-image: url("../images/cat-thirsty.svg"); }
+    .cat.thirsty:after {
+      content: ": thirsty"; }
+  .cat.dirty {
+    background-color: saddlebrown;
+    background-image: url("../images/cat-dirty.svg"); }
+    .cat.dirty:after {
+      content: ": dirty"; }
+  .cat.bored {
+    background-color: white;
+    background-image: url("../images/cat-bored.svg"); }
+    .cat.bored:after {
+      content: ": bored"; }
+  .cat.content {
+    background-color: palegoldenrod;
+    background-image: url("../images/cat-content.svg"); }
+    .cat.content:after {
+      content: ": content"; }
+  .cat.happy {
+    background-color: yellow;
+    background-image: url("../images/cat-happy.svg"); }
+    .cat.happy:after {
+      content: ": HAPPY!"; }
+  .cat:after {
+    display: none; }
