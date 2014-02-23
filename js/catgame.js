@@ -14,12 +14,15 @@
             div: $("<div class='tile cat'></div>").css("left", board.width()*index/4),
             state: randElem(feelings)
         };
+        _cat.otherStates = function() {
+            return $.grep(feelings, function (f) { return f != _cat.state });
+        }
         _cat.div.click(function() {
             if ((_cat.state == 'bored' && activeElem.type == 'toy')
                 || (_cat.state == 'hungry' && activeElem.type == 'food')
                 || (_cat.state == 'thirsty' && activeElem.type == 'water')
                 || (_cat.state == 'dirty' && activeElem.type == 'litter')) {
-                _cat.changeState(randElem(feelings));
+                _cat.changeState(randElem(_cat.otherStates()));
             } else if (_cat.state == 'happy'){
             } else if (_cat.state == 'angry'){
             } else if (_cat.state == 'content' && activeElem.type == randElem(elemTypes)){
@@ -60,9 +63,12 @@
             type: type
         };
         _elem.div.addClass(_elem.type);
+        _elem.otherTypes = function() {
+            return $.grep(elemTypes, function (f) { return f != _elem.type });
+        }
         _elem.changeType = function() {
             _elem.div.removeClass(_elem.type);
-            _elem.type = randElem(elemTypes);
+            _elem.type = randElem(_elem.otherTypes());
             _elem.div.addClass(_elem.type);
         };
         _elem.div.click(function() {
